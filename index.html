@@ -60,9 +60,10 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              <span style="color:#9484C5; font-weight: bold; font-style: italic">ThemeStation</span> : Generating Theme-Aware 3D Assets from Few Exemplars
+              <span style="color:#9484C5; font-weight: bold; font-style: italic">ThemeStation</span> : Generating
+              Theme-Aware 3D Assets from Few Exemplars
             </h1>
-            
+
             <h1 class="title is-size-3 publication-venue">
               <span style="font-weight: bold;">Proc. ACM SIGGRAPH 2024
               </span>
@@ -196,11 +197,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Real-world applications often require a large gallery of 3D assets that share a consistent theme. While remarkable advances have been made in general 3D content creation from text or image, synthesizing customized 3D assets following the shared theme of input 3D exemplars remains an open and challenging problem. In this work, we present <span
-              class="dnerf">ThemeStation</span>, a novel approach for theme-aware 3D-to-3D generation. <span
-              class="dnerf">ThemeStation</span> synthesizes customized 3D assets based on given few exemplars with two goals: 1) unity for generating 3D assets that thematically align with the given exemplars and 2) diversity for generating 3D assets with a high degree of variations. To this end, we design a two-stage framework that draws a concept image first, followed by a reference-informed 3D modeling stage. We propose a novel dual score distillation (DSD) loss to jointly leverage priors from both the input exemplars and the synthesized concept image. Extensive experiments and user studies confirm that <span
-              class="dnerf">ThemeStation</span> surpasses prior works in producing diverse theme-aware 3D models with impressive quality. <span
-              class="dnerf">ThemeStation</span> also enables various applications such as controllable 3D-to-3D generation.
+              Real-world applications often require a large gallery of 3D assets that share a consistent theme. While
+              remarkable advances have been made in general 3D content creation from text or image, synthesizing
+              customized 3D assets following the shared theme of input 3D exemplars remains an open and challenging
+              problem. In this work, we present <span class="dnerf">ThemeStation</span>, a novel approach for
+              theme-aware 3D-to-3D generation. <span class="dnerf">ThemeStation</span> synthesizes customized 3D assets
+              based on given few exemplars with two goals: 1) unity for generating 3D assets that thematically align
+              with the given exemplars and 2) diversity for generating 3D assets with a high degree of variations. To
+              this end, we design a two-stage framework that draws a concept image first, followed by a
+              reference-informed 3D modeling stage. We propose a novel dual score distillation (DSD) loss to jointly
+              leverage priors from both the input exemplars and the synthesized concept image. Extensive experiments and
+              user studies confirm that <span class="dnerf">ThemeStation</span> surpasses prior works in producing
+              diverse theme-aware 3D models with impressive quality. <span class="dnerf">ThemeStation</span> also
+              enables various applications such as controllable 3D-to-3D generation.
             </p>
           </div>
         </div>
@@ -219,7 +228,14 @@
               <img src="./static/images/overview.png" alt="method" class="center">
             </div>
             <p>
-              Given just one (this figure) or a few reference models (exemplars), our approach can generate theme-consistent 3D models in two stages. In the first stage, we fine-tune a pre-trained text-to-image diffusion model to form a customized theme-driven diffusion model that produces various concept images. In the second stage, we conduct reference-informed 3D asset modeling by progressively optimizing a rough initial model (omitted in this figure for brevity), which is obtained using an off-the-shelf image-to-3D method given the concept image, into an exquisite generated model. We use a novel dual score distillation (DSD) loss for optimization, which applies concept prior and reference prior at different noise levels (denoising timesteps).
+              Given just one (this figure) or a few reference models (exemplars), our approach can generate
+              theme-consistent 3D models in two stages. In the first stage, we fine-tune a pre-trained text-to-image
+              diffusion model to form a customized theme-driven diffusion model that produces various concept images. In
+              the second stage, we conduct reference-informed 3D asset modeling by progressively optimizing a rough
+              initial model (omitted in this figure for brevity), which is obtained using an off-the-shelf image-to-3D
+              method given the concept image, into an exquisite generated model. We use a novel dual score distillation
+              (DSD) loss for optimization, which applies concept prior and reference prior at different noise levels
+              (denoising timesteps).
             </p>
           </div>
         </div>
@@ -235,10 +251,13 @@
           <h2 class="title is-3">Controllable 3D-to-3D</h2>
           <div class="content has-text-justified">
             <p>
-              <span class="dnerf">ThemeStation</span> supports the application of controllable 3D-to-3D generation given user-specified text prompts, demonstrating the immense potential of <span class="dnerf">ThemeStation</span> to be seamlessly combined with emerging controllable image generation techniques for more interesting 3D-to-3D application.
+              <span class="dnerf">ThemeStation</span> supports the application of controllable 3D-to-3D generation given
+              user-specified text prompts, demonstrating the immense potential of <span
+                class="dnerf">ThemeStation</span> to be seamlessly combined with emerging controllable image generation
+              techniques for more interesting 3D-to-3D application.
             </p>
           </div>
-          <video poster="" id="" autoplay muted  loop height="100%">
+          <video poster="" id="" autoplay muted loop height="100%">
             <source src="./static/videos/application.mp4" type="video/mp4">
           </video>
         </div>
@@ -262,14 +281,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{wang2024themestation,
-          title={ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars}, 
-          author={Zhenwei Wang and Tengfei Wang and Gerhard Hancke and Ziwei Liu and Rynson W. H. Lau},
-          year={2024},
-          eprint={2403.15383},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV}
-      }</code></pre>
+      <pre><code>@article{wang2024themestation,
+        title={ThemeStation: Generating Theme-Aware 3D Assets from Few Exemplars}, 
+        author={Zhenwei Wang and Tengfei Wang and Gerhard Hancke and Ziwei Liu and Rynson W.H. Lau},
+        booktitle={ACM SIGGRAPH},
+        year={2024}
+  }</code></pre>
     </div>
   </section>
 
@@ -279,7 +296,8 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is powered by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We thank the authors for sharing the templates.
+              This website is powered by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We thank
+              the authors for sharing the templates.
             </p>
           </div>
         </div>
